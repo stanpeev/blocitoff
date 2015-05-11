@@ -106,3 +106,40 @@
   min-width: 1040px;
 
 }
+
+div#signin-details.form-horizontal {
+  text-align: center;
+}
+
+form#new_user.new_user {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+ margin-right: auto;
+}
+
+#signin-details {
+  margin-top: 40px;
+}
+
+div#signin-btn.form-group {
+  .btn.btn-success {
+  width: 100%;
+}
+}
+
+.btn-primary a {
+  color: white;
+}
+
+div#fb-button.btn.btn-primary {
+  width: 33%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.divider {
+  margin-top: 0px;
+  width: 30%;
+}
+

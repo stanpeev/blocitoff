@@ -1,28 +1,33 @@
-<h2>Sign in</h2>
+ <img src="/images/home-background.jpg" alt="rss feed" id="flscn-bckground" />
+ </div class="bs-docs-header"> 
+      <div class="jumbotron">
+        <div class="container">
+          <img src="/images/blocitoff-logo-big.png" alt="rss feed" id="logo-big" />
+          <p id="index-title">A to-do list app, that is actually doing something!</p>
 
-<div class="row">
-  <div class="col-md-8">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <%= devise_error_messages! %>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
+
+          <div class="form-horizontal" id="signin-details">
+                <div class="btn btn-primary" id="fb-button">
+                   <%= render "devise/shared/fb" %>
+                  </div>
+                  <hr class="divider"></hr>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
+                <div class="form-group" id="email-field">
+                  <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Enter email" %>
+                </div>
+                <div class="form-group" id="password-field">
+                  <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
+                </div>
+                <div class="form-group" id="signin-btn">
+                  <%= f.submit "Sign in", class: 'btn btn-success' %>
+                    </div>
+                    <div class="form-group" id="forgot-password">
+                      Don't have an account?<%= render "devise/shared/links" %>
+                    </div>
+                  <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
-      </div>
-      <div class="form-group">
-        <% if devise_mapping.rememberable? %>
-          <%= f.label :remember_me, class: 'checkbox' do %>
-            <%= f.check_box :remember_me %> Remember me
-          <% end %>
-        <% end %>
-        <%= f.submit "Sign in", class: 'btn btn-success' %>
-      </div>
-      <div class="form-group">
-        <%= render "devise/shared/links" %>
-      </div>
-    <% end %>
-  </div>
 </div>
