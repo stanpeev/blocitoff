@@ -3,6 +3,6 @@
      <span class="badge">
         <%= link_to "", user_item_path(@user.id, item.id), method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
       </span> 
-     <%= item.name %>
+     <%= item.name %> | <small><%= item.days_left %> days remaining</small>
 </li>
 <% end %>
