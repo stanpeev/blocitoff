@@ -18,13 +18,16 @@ class ItemsController < ApplicationController
      authorize @item 
 
      if @item.destroy
-       flash[:notice] = "\"#{@item.name}\" was deleted successfully."
-       redirect_to user_path(current_user)
-     else
-       flash[:error] = "There was an error deleting the item."
-       redirect_to user_path(current_user)
-     end
-   end
+         flash[:notice] = "\"#{@item.name}\" was deleted successfully."
+       else
+         flash[:error] = "There was an error deleting the item."
+       end
+ 
+       respond_to do |format|
+           format.html
+           format.js
+        end
+      end
 
   private
 
