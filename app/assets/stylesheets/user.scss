@@ -1,3 +1,110 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+}
+
+div#container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar {
+  width: 250px;
+  height: 960px;
+  background-color: #222222;
+  float: left;
+  margin-top: -20px;
+}
+
+.content {
+  width: auto;
+  height: auto;
+  margin-left: 250px;
+  padding-left: 15px; 
+}
+
+#heading {
+  padding-left: 15px;
+  border-bottom: 1px solid #333333;
+}
+
+.h1 {
+    font-weight: lighter;
+}
+
+ul#sidebar-nav {
+margin-left: -40px;
+}
+
+ul#sidebar-nav li {
+list-style: none;
+}
+
+ul#sidebar-nav li a {
+  color: #ccc;
+  font-weight: lighter;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s  ;
+}
+
+ul#sidebar-nav li a:hover {
+  background-color: #333333;
+  color: #fff;
+  padding-left: 30px;
+}
+
+ul#sidebar-nav li a.selected {
+  background-color: #333333;
+  color: #fff;
+}
+
+.new_item {
+padding-top: 15px;
+}
+
+#item-list {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#done-button {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.pull-right.btn-default {
+  background-color: transparent;
+  color: #2f78ba;
+  border-color: #2f78ba;
+  border-width: 2px;
+}
+
+#submit-button {
+  padding-top: 15px;
+}
+
+div#item-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+span.badge {
+  background-color: #2f78ba;
+  color: #fff;
+}
+
+span.badge a {
+  color: #fff;
+}

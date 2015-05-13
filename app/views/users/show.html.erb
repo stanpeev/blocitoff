@@ -1,8 +1,24 @@
-<% if @user.name? %>
-  <h1>Welcome <%= @user.name %></h1>
-<% else %>
-  <h1>Welcome <%= @user.email %></h1>
-<% end %>
+<div id="container">
+  <div class="sidebar">
+    <ul id="sidebar-nav">
+      <li ><a class="selected" href="#"><span class="glyphicon glyphicon-th-list"></span> Active To-Dos</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-repeat"></span> Recurring To-Dos</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-ok-sign"></span> Completed</a></li>
+    </ul>
+    </div>
 
-<%= render partial: 'items/item', locals: { items: @items } %>
-     <%= render partial: 'items/form', locals: { item: @items.new } %>
+    <div class="content">
+      
+        <div id="heading">
+          <h1>Active To-Dos</h1>
+        </div>
+
+      <div id="item-wrap">
+          <%= render partial: 'items/item', locals: { items: @items } %>
+      </div>
+      <%= render partial: 'items/form', locals: { item: @items.new } %> 
+    </div>
+</div>
+
+
+

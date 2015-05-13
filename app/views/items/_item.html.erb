@@ -1,3 +1,8 @@
 <% items.each do |item| %>
- <%= item.name %><br/>
+<li class="list-group-item">
+     <span class="badge">
+        <%= link_to "", [@user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
+      </span> 
+     <%= item.name %>
+</li>
 <% end %>

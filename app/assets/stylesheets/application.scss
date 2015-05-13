@@ -12,7 +12,9 @@
  *
  *= require_tree .
  *= require_self
+ *= require morris
  */
+
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -123,8 +125,16 @@ form#new_user.new_user {
 }
 
 div#signin-btn.form-group {
-  .btn.btn-success {
+  .btn.btn-default {
   width: 100%;
+  background-color: transparent;
+  color: white;
+  border-width: 2px;
+  border-color: #fff;
+}
+.btn.btn-default:hover {
+  background-color: white;
+  color: #010101;
 }
 }
 
@@ -141,5 +151,31 @@ div#fb-button.btn.btn-primary {
 .divider {
   margin-top: 0px;
   width: 30%;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+.navbar-header {
+  margin-left: -115px;
+}
+
+div#forgot-password.form-group a {
+  color: #59ba58;
+}
+
+div#forgot-password.form-group a:hover {
+  color: white;
+}
+
+.alert-success {
+  border-radius: 0px;
+  margin-top: -20px;
+}
+
+.alert-warning {
+  border-radius: 0px;
+  margin-top: -20px;
 }
 
