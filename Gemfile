@@ -22,6 +22,7 @@ gem 'omniauth-linkedin'
 gem 'faker'
 gem 'morrisjs-rails'
 gem 'raphael-rails'
+gem 'whenever', :require => false
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

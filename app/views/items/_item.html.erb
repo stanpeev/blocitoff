@@ -1,8 +1,8 @@
 <% items.each do |item| %>
-<li class="list-group-item">
+<li class="list-group-item" id="item-<%= item.id %>">
      <span class="badge">
         <%= link_to "", user_item_path(@user.id, item.id), method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
       </span> 
-     <%= item.name %> | <small><%= item.days_left %> days remaining</small>
+     <%= item.name %> | <small><%= item.days_left %> days ago</small>
 </li>
 <% end %>
